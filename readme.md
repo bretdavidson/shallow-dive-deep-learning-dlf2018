@@ -6,8 +6,5 @@ Install backslide: `npm install -g backslide`
 
 Serve slides in development: `bs s`
 
-Export to _mostly_ self-contained file: `bs e`. Look for the results in `dist`.
-
-_Currently backslide does not inline video._
-
+Build slides: `bs export -o .`
 Create PDF: `bs p`. Look for the result in `pdf`.
