@@ -277,10 +277,17 @@ training process.
 
 Our input image is fed into the network through the input layer on the left. The data flows
 through the neurons and connections in the hidden layers in the middle, until a prediction is made at the output layer at the
-end of the network. Earlier hidden layers learn abstract features like edges of the image, while later
-layers learn more specific features like noses, ears, tails.
-Here you can see the network has predicted the image
-is a dog with 91% confidence.
+end of the network.
+
+In each neuron, the weights are applied to incoming values, they are
+combined and sent through an "activation function" which either mutes or
+amplifies the signal going into the next neuron.
+
+Essentially, we want to change the weights such that when we feed in an
+image of a dog, the numbers flow through the network in such a way that
+the number for "dog" in the output layer is closer to 1. We can do this
+using a process called back propagation over the entire training set
+many times.
 
 ---
 
