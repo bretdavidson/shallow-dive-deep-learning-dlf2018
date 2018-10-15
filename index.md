@@ -321,9 +321,9 @@ Self-driving Mario Kart! Why did we think this would be a good example?
   - Given NEW, untrained screenshot, generate NEW joystick inputs
 
 ???
-Created a deep learning model that would create a self driving mario Kart. We wrote a program that took a screenshot of the game every 0.2 seconds, while at the same time recording the controller input.
+We wrote a program that took a screenshot of the game every 0.2 seconds, while at the same time recording the controller input.
 
-Predictions are made, given NEW, untrained screenshots, generate NEW joystick inputs. We also wrote code to deliver those joystick inputs to the game autmatically.
+The model then makes predictions given NEW, untrained screenshots, and generates NEW joystick inputs.
 
 ---
 <video controls src="videos/1.mov" type="video/mp4" class="img-squash img-center"/>
@@ -331,13 +331,11 @@ Predictions are made, given NEW, untrained screenshots, generate NEW joystick in
 ???
 This is an early stage demo trained on a single lap around the track. It hasn't learned much yet, it's not turning.
 
-
-
 ---
 <video controls src="videos/2.mov" type="video/mp4" class="img-squash img-center"/>
 
 ???
-This example is a model that has been trained on 3 laps around the track. You can see it can now do basic turns, but it can't recover from errors.
+This example is a model that has been trained on 3 laps around the track. You can see it can now do basic turns.
 
 A few notes on how this is working. You are seeing the prediction part of deep learning. We are taking rapid screenshots of the game, passing the image (as a multi-dimensional array of numbers) to our model, getting a prediction (controller input), and then sending that input into MarioKart.
 
@@ -388,23 +386,14 @@ to pay attention to some of the key things he mentions.
 <video controls src="videos/deep_catalog_1_720.mov" type="video/mp4" class="img-squash img-center"/>
 
 ???
-Here's a demo application we've developed to show how we could leverage
+Here's a demo catalog application we've developed to show how we could leverage
 deep learning to get a head start in metadata generation for newly
 digitized or created materials, and how we could improve discovery
 without any human generated metadata.
 
+I'm going to ingest this video and only give it a title and author.
 
-Now lets look at this new catalog application. I'm going to ingest this
-video and only give it a title and author.
-
-So what is happening here? When I uploaded the video, in the background, the
-audio was extracted automatically and it was run through a speech to
-text model. The full text is being indexed into Solr.
-
-Remember what Danny was talking about in the video? Harrelson Hall?
-Let's try searching for that. He also mentioned he used to be a physics
-major right? Let's try that one too. He said that he ended up a liberal
-arts major though. You can see where I'm going with this.
+So what is happening here? When I uploaded the video, in the background, the audio was extracted automatically and it was run through a speech to text model. The full text is being indexed into Solr and now I can search for things that we heard in the video.
 
 Now that we have a textual transcription, imagine what else we can do.
 We can definitely provide it directly to users and automatically enable
@@ -440,8 +429,6 @@ class:impact
 ???
 The second opportunity for libraries is supporting researchers through deep learning consultations and research sprints.
 
-We can help bootstrap researchers looking to get started with applying deep learning techniques to their research projects.
-
 ---
 # Snowflake Classification
 
@@ -453,9 +440,9 @@ We can help bootstrap researchers looking to get started with applying deep lear
 
 ???
 
-A faculty member at NCSU from the dept of marine, earth, and atmospheric sciences, contacted the libraries looking for machine learning support. They have an extremely large dataset of over 1 million snowflake images. These images are taken by one of only ten cameras that are doing this capture.
+A faculty member at NCSU from the dept of marine, earth, and atmospheric sciences, contacted the libraries looking for machine learning support. They have an extremely large dataset of over 1 million snowflake images.
 
-They have used a number of "traditional" machine learning techniques to attempt to classify degrees of "riming" on snowflakes, that is, how large or small the clusters of ice are. We are working with them to develop a proof of concept model to explore the potential for current deep learning computer vision techniques to improve on their results.
+They have used a number of "traditional" machine learning techniques to attempt to classify degrees of "riming" on snowflakes, that is, how large or small the clusters of ice are. We are working with them to develop a proof of concept deep learning model to further improve on their results.
 
 This has also been an opportunity to explore the viability of providing this kind of service to researchers. Is it useful for them? Can we scale this kind of support?
 
@@ -464,22 +451,18 @@ class:impact
 # Cultural Heritage Ecosystem
 
 ???
-A third opportunity area is developing the ecosystem around deep learning use, e.g. data annotation, data distribution, etc.
-
-In general, improving use of these approaches among cultural heritage institutions.
+A third opportunity area is developing the ecosystem around deep learning use in cultural heritage institutions
 
 ---
 # Data Annotation and Sharing
-- current tools for data annotation are limited
 - opportunities for defining best practices for sharing models and approaches
+- using standards like IIIF and WebAnnotation/OpenAnnotation
 
 ???
 
-Through our experimentation, we've learned that current tools for data annotation are extremely limited in terms of their ease of use and speed of use. We've prototyped new designs for tools in this area that speed up the process, and also allow for crowdsourcing of this process.
+To encourage sharing of models and data, we can develop best practices that include standards that are already being used in libraries, such as IIIF. We've been developing approaches that use collections of IIIF image URLs as training datasets rather than static copies of images. This allows for a distributed training data set potentially spanning over many institutions, and simplifies the data sharing process by reducing its size.
 
-As earlier adopters, we're also in the position to help define best practices and approaches for sharing models and data for reuse by other cultural heritage institutions.
-
-For example, if we pursued a production model to detect headlines and images in newspapers, this would probably be useful to other libraries. How can we share data for the purposes of reuse? How can we make it easy for other institutions to get their own models up and running? How can we make it easy for them to contribute new data to the model?
+We are also having our deep learning services output annotations in standardized formats like WebAnnotation or OpenAnnotation so that they can be viewed in existing image viewers and be provided in a consistent format.
 
 ---
 # Ethics
