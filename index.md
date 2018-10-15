@@ -58,19 +58,11 @@ application in libraries.
 
 ???
 
-Let's set the stage a little bit. Here are some things that computers have traditionally been good at:
+Let's set the stage a little bit. Computers have traditionally been good at calculations, data storage, retrieval and display, automating things that used to take a while to do manually, and following well defined rules and structures.
 
-Things involving calculations, data storage, retrieval and display, and automating things that used to take a while todo manually, following well defined rules and structure.
+Computers have traditionally been worse at pattern recognition, perception (knowing what something is), generalization, and inference (making predictions).
 
-We've seen these over and over again during the history of computing. These are things we've been able to do on a computer for a long time and we can do them at a fairly large scale now.
-
-Here are some things that computers have traditionally been worse at.
-- Pattern recognition
-- perception (knowing what something is)
-- generalization
-- and inference (making predictions).
-
-We have to explicitly tell a computer what something is, or manually define precise steps to follow in order to achieve some goal. These are some of the areas where deep learning is helping to improve the performance of computers.
+These are some of the areas where deep learning is helping to improve the performance of computers.
 
 ---
 class:impact
@@ -81,16 +73,16 @@ https://dli-ml.lib.ncsu.edu/sumavision/
 
 We'll start off with a demo that maybe 5-7 years ago would have been very hard to accomplish using traditional computing tools.
 
-To give some context, Suma is an application we manage in DLI for doing space analytics. Generally the way this is done is that someone walks through the library with an IPad and observes with their own eyes what people are doing in our spaces. They manually capture the number of people by navigating the space and pressing a button for each person they see.
+To give some context, Suma is an application we developed at NC State for doing space analytics. Generally the way this is done is that someone walks through the library with an IPad and observes with their own eyes what people are doing in our spaces. They manually capture the number of people by navigating the space and pressing a button for each person they see.
 
 ---
-# SumaVision Demo 1
+# SumaVision Demo
 
 <video controls src="videos/sumav_1.mov" type="video/mp4" class="img-squash img-center"/>
 
 ???
 
-This is a demo to illustrate the power of the technology, so we'll leave ethical considerations aside for right now. What if we could capture images of a space and use that to count the number of people in a space?
+Leaving ethical considerations aside for the purposes of a technical demo, what if we could capture images of a space and use that to count the number of people in a space?
 
 We built this demo to show that we can do something like this pretty easily. You can see that this was captured in Suma.
 
@@ -102,39 +94,19 @@ We built this demo to show that we can do something like this pretty easily. You
 
 ## Supervised Learning
 
-- Inferring a function based on labeled training data
+- Making a prediction based on labeled training data
 
 ## Unsupervised Learning
 
-- Inferring a function to describe hidden structure from "unlabeled" data
+- Describing hidden structure from "unlabeled" data
 
 ???
-Examples:
-- Linear regression / logistic regression
-- Decision trees
-- Random Forests
 
+Supervised learning is when we have an algorithm that learns how to make predictions based on labeled data it has access to in advance. Examples of these are things like linear regression, logistic regression, and random forests.
 
-- Given a set of images that are labeled either “cat” or “dog”, train a model to predict whether unseen images are cats or dogs
-- The majority of practical ML applications are supervised learning
+The other broad category is unsupervised learning, which is trying to describe hidden structures in unabled data and then make a prediction. An example of this might be classifying unlabeled textual data.
 
-
-Supervised learning is when we have an algorithm that learns how to make predictions based on labeled data it has access to in advance.
-
-Examples of these are things like linear regression, logistic regression, and random forests. Most of the things you've heard about in the news or use everyday are primarily supervised learning.
-
-If we have an algorithm and we feed it labeled images of cats and dogs, we can train it to evaluate an previously unseen, new image and classify it.
-
-The other broad category is unsupervised learning, which is trying to make sense of an unlabled data set and then making predictions.
-
-An example of this might be classifying unlabeled textual data.
-
-This has been a less researched area, because it's a much harder problem.
-
-- Given a set of images which aren’t labeled, use a model to cluster ones with similar properties into different categories
-
-Examples:
-- Clustering: K-means, hierarchical clustering, etc.
+The majority of practical ML applications are supervised learning. If we have an algorithm and we feed it labeled images of cats and dogs, we can train it to evaluate a previously unseen, new image and classify it.
 
 ---
 # Deep Learning
@@ -539,4 +511,3 @@ class:impact
 
 ## Kevin Beswick (kdbeswic@ncsu.edu)
 ## Bret Davidson (bddavids@ncsu.edu)
-
