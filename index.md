@@ -1,5 +1,5 @@
 title: A Shallow Dive Into Deep Learning
-url: https://www.lib.ncsu.edu
+url:
 class: animation-fade
 layout: true
 
